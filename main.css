@@ -1,0 +1,72 @@
+body {
+	background-repeat: no-repeat;
+	background-position: center center fixed;
+	background-image: url(images/19372-sunny-day-at-the-beach-1920x1080-beach-wallpaper.jpg);
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+
+-o-background- 
+background-size:cover;
+	margin-left: 0px;
+	margin-top: -5px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #A2F371;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+#logo {
+	width: 100%;
+	height: 100px;
+	margin-top: -40px;
+	background-color: #599DD1;
+}
+#content {
+	width: 90%;
+	height: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+#pic1 {
+	width: 100px;
+	height: 100px;
+	background-image: url(images/100px-Found_Turtle.png);
+}
+#pic2 {
+	width: 100px;
+	height: 100px;
+	background-image: url(images/Rabbit-icon.png);
+	margin-top: 150px;
+}
+bt1 {
+
+
+}
+button {
+	float: left;
+	width: 100px;
+	height: 50px;
+	margin-top: 50px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+#bt2 {
+	float: right;
+	width: 100px;
+	height: 50px;
+}
