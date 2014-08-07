@@ -1,13 +1,18 @@
 body {
-background: url(images/19372-sunny-day-at-the-beach-1920x1080-beach-wallpaper.jpg)  no-repeat center center fixed;
--webkit-background-size:cover;
--moz-background-size:cover;
+	background-repeat: no-repeat;
+	background-position: center center fixed;
+	background-image: url(images/19372-sunny-day-at-the-beach-1920x1080-beach-wallpaper.jpg);
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+
 -o-background- 
 background-size:cover;
-margin-left: 0px;
-margin-top: -5px;
-margin-right: 0px;
-margin-bottom: 0px;
+	margin-left: 0px;
+	margin-top: -5px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #A2F371;
 }
 a:link {
 	text-decoration: none;
@@ -24,8 +29,8 @@ a:active {
 #logo {
 	width: 100%;
 	height: 100px;
-	background-color: #599DD1;
 	margin-top: -40px;
+	background-color: #599DD1;
 }
 #content {
 	width: 90%;
@@ -47,5 +52,21 @@ a:active {
 	width: 100px;
 	height: 100px;
 	background-image: url(images/Rabbit-icon.png);
-	margin-top: 300px;
+	margin-top: 150px;
+}
+bt1 {
+
+
+}
+button {
+	float: left;
+	width: 100px;
+	height: 50px;
+	margin-top: 50px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+#bt2 {
+	float: right;
+	width: 100px;
+	height: 50px;
 }
