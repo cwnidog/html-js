@@ -24,7 +24,8 @@ a:active {
 #logo {
 	width: 100%;
 	height: 100px;
-	background-color: #577083;
+	background-color: #599DD1;
+	margin-top: -40px;
 }
 #content {
 	width: 90%;
