@@ -1,5 +1,7 @@
 //Moves the tortoise and the hare on the page, based on previous assignment
 
+var raceRunning = false;
+
 function Animal(name, speed, focus, imageID) {
   this.name = name;
   this.speed = speed; //distance moved per step
@@ -14,8 +16,6 @@ function Animal(name, speed, focus, imageID) {
   };
 }
 
-var raceRunning = false;
-
 function Race(animal1, animal2) {
   this.animal1 = animal1;
   this.animal2 = animal2;
@@ -28,20 +28,35 @@ function Race(animal1, animal2) {
     this.animal1.imageElement.style.left = String(this.animal1.position) + "%";
     this.animal2.imageElement.style.left = String(this.animal2.position) + "%";
   };
-
-  this.reset = function () {
-    if (!raceRunning) {
-      var invElement = document.getElementById("invDiv");
-      this.animal1.position = 0;
-      this.animal2.position = 0;
-      this.animal1.imageElement.style.left = String(this.animal1.position) + "%";
-      this.animal2.imageElement.style.left = String(this.animal2.position) + "%";
-      invElement.style.display = "none";
-    }
-  };
 }
 
+function initializeAnimal(animalValue, divNum) {
+  var picID = "pic" + divNum;
+  var imageElement = document.getElementById(picID);
+  if (animalValue === "Turtle") {
+    imageElement.style.backgroundImage = "url(images/100px-Found_Turtle.png)";
+    return new Animal("Tortoise", 1, 9, picID);
+  }
+  if (animalValue === "Rabbit") {
+    imageElement.style.backgroundImage = "url(images/Rabbit-icon.png)";
+    return new Animal("Hare", 3, 3, picID);
+  }
+  if (animalValue === "Mouse") {
+    imageElement.style.backgroundImage = "url(images/mouse-icon.png)";
+    return new Animal("Mouse", 8, 1, picID);
+  }
+}
 
+function reset() {
+  if (!raceRunning) {
+    var invElement = document.getElementById("invDiv");
+    var pic1 = document.getElementById("pic1");
+    var pic2 = document.getElementById("pic2");
+    pic1.style.left = "0%";
+    pic2.style.left = "0%";
+    invElement.style.display = "none";
+  }
+}
 
 function runRaceInner(race) {
   race.step();
@@ -80,14 +95,24 @@ function runRaceInner(race) {
   }
 }
 
-function runRace(race) {
-  if (!raceRunning) {
-    raceRunning = true;
-    runRaceInner(race);
-  }
+function runRace() {
+  if (raceRunning) {
+    return;
+  }//I only want to run if there is no race, but don't
+   //want to put everything in an if loop
+  reset();
+  raceRunning = true;
+
+  //get input here
+  var animal1type = document.getElementById("sel1").value;
+  var animal2type = document.getElementById("sel2").value;
+
+  var animal1 = initializeAnimal(animal1type, 1);
+  var animal2 = initializeAnimal(animal2type, 2);
+
+  var bigRace = new Race(animal1, animal2);
+
+  runRaceInner(bigRace);
 }
 
-var turtle = new Animal("Tortoise", 1, 9, "pic1");
-var rabbit = new Animal("Hare", 3, 3, "pic2");
 
-var bigRace = new Race(rabbit, turtle);

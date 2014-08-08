@@ -80,6 +80,7 @@ button {
 	position:fixed;
 	margin-left:190px;
 	display:none;/* This is the one that needs to be set to Display block*/
+	z-index: 99;
 }
 #wrapper {
 	height: auto;

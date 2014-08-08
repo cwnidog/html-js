@@ -30,24 +30,24 @@ p {
 </div>
 <div id = "cont2">
   <p>
-    <select style="float:left">
-      <option value="rabbit">Hare</option>
-      <option value="Turtle">Tortoise</option>
+    <select id="sel1" style="float:left">
+      <option value="Rabbit">Hare</option>
+      <option value="Turtle" SELECTED>Tortoise</option>
       <option value="Mouse">Mouse</option>
     </select>
 
-    <select style="float:right">
-      <option value="rabbit">Hare</option>
+    <select id="sel2" style="float:right">
+      <option value="Rabbit" SELECTED>Hare</option>
       <option value="Turtle">Tortoise</option>
       <option value="Mouse">Mouse</option>
     </select>
 
   </p>
-  <button id = "bt1" onclick = "runRace(bigRace);"
+  <button id = "bt1" onclick = "runRace();"
    onMouseOver = "this.innerHTML='RACING'" onMouseOut="this.innerHTML='Start'">Start
   </button>
 <!--Reset button-->
-  <button id = "bt2" onclick = "bigRace.reset();">Reset</button>
+  <button id = "bt2" onclick = "reset();">Reset</button>
 </div>
 </div>
 <br />
