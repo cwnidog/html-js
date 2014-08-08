@@ -33,15 +33,15 @@ function Race(animal1, animal2) {
 function initializeAnimal(animalValue, divNum) {
   var picID = "pic" + divNum;
   var imageElement = document.getElementById(picID);
-  if (animalValue === "turtle") {
+  if (animalValue === "Turtle") {
     imageElement.style.backgroundImage = "url(images/100px-Found_Turtle.png)";
     return new Animal("Tortoise", 1, 9, picID);
   }
-  if (animalValue === "rabbit") {
+  if (animalValue === "Rabbit") {
     imageElement.style.backgroundImage = "url(images/Rabbit-icon.png)";
     return new Animal("Hare", 3, 3, picID);
   }
-  if (animalValue === "mouse") {
+  if (animalValue === "Mouse") {
     imageElement.style.backgroundImage = "url(images/mouse-icon.png)";
     return new Animal("Mouse", 8, 1, picID);
   }
@@ -103,9 +103,9 @@ function runRace() {
   reset();
   raceRunning = true;
 
-  //get input here.
-  var animal1type = "turtle";
-  var animal2type = "mouse";
+  //get input here
+  var animal1type = document.getElementById("sel1").value;
+  var animal2type = document.getElementById("sel2").value;
 
   var animal1 = initializeAnimal(animal1type, 1);
   var animal2 = initializeAnimal(animal2type, 2);

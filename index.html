@@ -5,6 +5,11 @@
 <title>html &amp;  Js RACE</title>
 <script type = "text/javascript" src = "jquery.js"></script>
 <link href = "main.css" rel = "stylesheet" type = "text/css">
+<style type="text/css">
+p {
+	font-size: 24px;
+}
+</style>
 </head>
 <body>
  <div id = "wrapper">
@@ -19,37 +24,35 @@
 <!-- Set to block JS-->
 <div id = "pic1"></div>
 <div id = "pic2"></div>
+<div id="cont3">
+ <p style="float:left; font-size: 24px; color: #036;">Top Racer</p>
+ <p style="float:right; color: #036;">Bottom Racer</p>
+</div>
 <div id = "cont2">
+  <p>
+    <select id="sel1" style="float:left">
+      <option value="Rabbit">Hare</option>
+      <option value="Turtle" SELECTED>Tortoise</option>
+      <option value="Mouse">Mouse</option>
+    </select>
+
+    <select id="sel2" style="float:right">
+      <option value="Rabbit" SELECTED>Hare</option>
+      <option value="Turtle">Tortoise</option>
+      <option value="Mouse">Mouse</option>
+    </select>
+
+  </p>
   <button id = "bt1" onclick = "runRace();"
    onMouseOver = "this.innerHTML='RACING'" onMouseOut="this.innerHTML='Start'">Start
   </button>
 <!--Reset button-->
   <button id = "bt2" onclick = "reset();">Reset</button>
 </div>
-<script type = "text/javascript">
- $(document).ready(function(){
-  $('#cont2').animate({
-   width:395,height:140, opacity:.8
-  }, function(){
-  $('#cont2').hover(function(){
-  $(this).stop().animate({ width:450, height:140, opacity:1},('fast'));
-  }, function (){
-  $(this).stop().animate({width:395, height:150, opacity:.9}, ('fast'));
-  });
- });
-});
-</script>
 </div>
-<footer>&copy;2014 All Rights reserved. Html and Js.
- <a href = "https://github.com/DonQuality"
-  title = "GitHub"
-  target = "_blank"
-  class = "links">DonQuality</a>
- <a href = "https://github.com/jbbrokaw"
-  title = "GitHub"
-  target = "_blank"
-  class = "links">jbbrokaw</a></span>
-</footer>
+<br />
+<br />
+<footer>2014 HTML and JS GAME. <a href="https://github.com/DonQuality" title="Github" target="_blank">DonQuality</a> / <a href="https://github.com/jbbrokaw" title="Github" target="_blank">Jbbrokaw</a></footer>
 <script src = "code.js"></script>
 </div>
 </body>
