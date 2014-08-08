@@ -1,13 +1,8 @@
 body {
 	background-repeat: no-repeat;
 	background-position: center center fixed;
-	background-image: url(images/19372-sunny-day-at-the-beach-1920x1080-beach-wallpaper.jpg);
+	background-image: url(images/bg.jpg);
 	background-attachment: fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-
--o-background- 
-background-size:cover;
 	margin-left: 0px;
 	margin-top: -5px;
 	margin-right: 0px;
@@ -28,7 +23,7 @@ a:active {
 }
 #logo {
 	width: 100%;
-	height: 100px;
+	height: 80px;
 	margin-top: -40px;
 	background-color: #599DD1;
 }
@@ -47,26 +42,50 @@ a:active {
 	width: 100px;
 	height: 100px;
 	background-image: url(images/100px-Found_Turtle.png);
+	display:;/* for now */
 }
 #pic2 {
 	width: 100px;
 	height: 100px;
 	background-image: url(images/Rabbit-icon.png);
 	margin-top: 150px;
-}
-bt1 {
-
-
+	display:;/* for now */
 }
 button {
 	float: left;
 	width: 100px;
 	height: 50px;
 	margin-top: 50px;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Verdana", "sans-serif";
 }
 #bt2 {
 	float: right;
 	width: 100px;
 	height: 50px;
+}
+#cont2 {
+	height: 250px;
+	width: 400px;
+	/* [disabled]background-color: #599DD1; */
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2px;
+	display:;/* for now */
+}
+#invDiv {
+	height: 100px;
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 200px;
+	position:fixed; 
+	margin-left:235px;
+	display:none;/* This is the one that needs to be set to Display block*/
+}
+#wrapper {
+	height: 900x;
+}
+.links {
+	color: #0054FF;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
 }
