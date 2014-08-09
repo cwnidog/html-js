@@ -103,8 +103,8 @@ h1{
 }
 footer{
 	text-align: center;
-  color: #06212E;
-  font-family: 'Lucida Grande','Lucida Sans Unicode','Lucida Sans','DejaVu Sans',
+	color: #236467;
+	font-family: 'Lucida Grande','Lucida Sans Unicode','Lucida Sans','DejaVu Sans',
   Verdana,
   sans-serif;
 }
@@ -129,5 +129,5 @@ color: #036;
 .links {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: 18px;
-	color: #06212E;
+	color: #FF5F00;
 }
