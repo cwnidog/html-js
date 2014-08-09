@@ -2,13 +2,10 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>html &amp;  Js RACE</title>
+<title>HTML &amp; JS RACE</title>
 <script type = "text/javascript" src = "jquery.js"></script>
 <link href = "main.css" rel = "stylesheet" type = "text/css">
 <style type="text/css">
-p {
-	font-size: 24px;
-}
 </style>
 </head>
 <body>
@@ -25,24 +22,23 @@ p {
 <div id = "pic1"></div>
 <div id = "pic2"></div>
 <div id="cont3">
- <p style="float:left; font-size: 24px; color: #036;">Top Racer</p>
- <p style="float:right; color: #036;">Bottom Racer</p>
+ <p id="P1">Pick your <u>Top</u> Racer&rarr;</p>
+ <p id = "P2">&larr;Pick your <u>Bottom</u> Racer</p>
 </div>
 <div id = "cont2">
-  <p>
-    <select id="sel1" style="float:left">
-      <option value="Rabbit">Hare</option>
-      <option value="Turtle" SELECTED>Tortoise</option>
-      <option value="Mouse">Mouse</option>
-    </select>
+<p>
+<select id="sel1" style="float:left">
+  <option value="Rabbit">Hare</option>
+  <option value="Turtle" SELECTED>Tortoise</option>
+  <option value="Mouse">Mouse</option>
+</select>
 
-    <select id="sel2" style="float:right">
-      <option value="Rabbit" SELECTED>Hare</option>
-      <option value="Turtle">Tortoise</option>
-      <option value="Mouse">Mouse</option>
-    </select>
-
-  </p>
+<select id="sel2" style="float:right">
+  <option value="Rabbit" SELECTED>Hare</option>
+  <option value="Turtle">Tortoise</option>
+  <option value="Mouse">Mouse</option>
+</select>
+</p>
   <button id = "bt1" onclick = "runRace();"
    onMouseOver = "this.innerHTML='RACING'" onMouseOut="this.innerHTML='Start'">Start
   </button>
@@ -52,7 +48,7 @@ p {
 </div>
 <br />
 <br />
-<footer>2014 HTML and JS GAME. <a href="https://github.com/DonQuality" title="Github" target="_blank">DonQuality</a> / <a href="https://github.com/jbbrokaw" title="Github" target="_blank">Jbbrokaw</a></footer>
+<footer>&copy;2014 HTML and JS GAME. <span class="links" style="color:#06212E"><a href="https://github.com/DonQuality" title="Github" target="_blank" class="links">DonQuality</a> / <a href="https://github.com/jbbrokaw" title="Github" target="_blank" class="links">Jbbrokaw</a></span></footer>
 <script src = "code.js"></script>
 </div>
 </body>

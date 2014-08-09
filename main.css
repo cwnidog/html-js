@@ -114,4 +114,20 @@ footer{
 	margin-right: auto;
 	margin-left: auto;
 }
-
+p{
+	font-size: 24px;
+}
+#P1{
+float:left;
+font-size: 24px;
+color: #036;
+}
+#P2{
+	float:right;
+	color: #036;
+}
+.links {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 18px;
+	color: #06212E;
+}
