@@ -103,8 +103,8 @@ h1{
 }
 footer{
 	text-align: center;
-  color: #06212E;
-  font-family: 'Lucida Grande','Lucida Sans Unicode','Lucida Sans','DejaVu Sans',
+	color: #236467;
+	font-family: 'Lucida Grande','Lucida Sans Unicode','Lucida Sans','DejaVu Sans',
   Verdana,
   sans-serif;
 }
@@ -114,4 +114,20 @@ footer{
 	margin-right: auto;
 	margin-left: auto;
 }
-
+p{
+	font-size: 24px;
+}
+#P1{
+float:left;
+font-size: 24px;
+color: #036;
+}
+#P2{
+	float:right;
+	color: #036;
+}
+.links {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 18px;
+	color: #FF5F00;
+}
