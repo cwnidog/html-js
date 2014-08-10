@@ -16,9 +16,11 @@ function Animal(name, speed, focus, imageID) {
   };
 }
 
-function Race(animal1, animal2) {
+function Race(animal1, animal2, bet, choice) {
   this.animal1 = animal1;
   this.animal2 = animal2;
+  this.bet = bet;
+  this.choice = choice;
   this.totalDistance = 90;
   this.delay = 100;
 
@@ -27,6 +29,27 @@ function Race(animal1, animal2) {
     this.animal2.move();
     this.animal1.imageElement.style.left = String(this.animal1.position) + "%";
     this.animal2.imageElement.style.left = String(this.animal2.position) + "%";
+  };
+
+  this.determineWinner = function () {
+    var winner = "";
+    if ((this.animal1.position >= this.totalDistance) &&//Animal1 wins if they cross
+        (this.animal2.position < this.totalDistance)) {  //and animal2 doesn't
+      winner = "top";
+    } else if ((this.animal2.position >= this.totalDistance) &&  //and vice versa
+          (this.animal1.position < this.totalDistance)) {
+      winner = "bottom";
+    } else if ((this.animal2.position >= this.totalDistance) &&  //if it looks like a tie
+          (this.animal1.position >= this.totalDistance)) {
+      if (this.animal2.position > this.animal1.position) { //figure out who went farther
+        winner = "bottom";
+      } else if (this.animal1.position > this.animal2.position) {
+        winner = "top";
+      } else {             //They both went the same distance if we get here
+        winner = "TIE"; //This is a flag; we'll use it differently from a name
+      }
+    }
+    return winner;
   };
 }
 
@@ -58,6 +81,13 @@ function reset() {
   }
 }
 
+var gambler = {
+  walletElement: document.getElementById("funds"),
+  choiceElements: document.getElementsByName("choice"),
+  betElement: document.getElementById("bet")
+};
+
+
 function runRaceInner(race) {
   race.step();
   var invElement = document.getElementById("invDiv");
@@ -70,25 +100,21 @@ function runRaceInner(race) {
     setTimeout(function () {runRaceInner(race); }, race.delay);
   } else {
     raceRunning = false;          //the race is over, figure out who wins
-    if ((race.animal1.position >= race.totalDistance) &&//Animal1 wins if they cross
-        (race.animal2.position < race.totalDistance)) {  //and animal2 doesn't
-      winner = race.animal1.name;
-    } else if ((race.animal2.position >= race.totalDistance) &&  //and vice versa
-          (race.animal1.position < race.totalDistance)) {
-      winner = race.animal2.name;
-    } else if ((race.animal2.position >= race.totalDistance) &&  //if it looks like a tie
-          (race.animal1.position >= race.totalDistance)) {
-      if (race.animal2.position > race.animal1.position) { //figure out who went farther
-        winner = race.animal2.name;
-      } else if (race.animal1.position > race.animal2.position) {
-        winner = race.animal1.name;
-      } else {             //They both went the same distance if we get here
-        winner = "TIE"; //This is a flag; we'll use it differently from a name
-      }
-    }//we now know the winner for sure.
+    winner = race.determineWinner();
     if (winner === "TIE") {
       invTextElement.textContent = "There was a tie!!!";
+      gambler.walletElement.textContent =   //you get your bet back
+        Number(gambler.walletElement.textContent) + race.bet;
     } else {
+      if (race.choice === winner) { //collect winnings; otherwise wallet is same
+        gambler.walletElement.textContent =
+          Number(gambler.walletElement.textContent) + 2 * race.bet;
+      }
+      if (winner === "top") {
+        winner = race.animal1.name;
+      } else {
+        winner = race.animal2.name;
+      }
       invTextElement.textContent = winner + " Wins!!!";
     }
     invElement.style.display = "block";
@@ -106,11 +132,22 @@ function runRace() {
   //get input here
   var animal1type = document.getElementById("sel1").value;
   var animal2type = document.getElementById("sel2").value;
+  var bet = Number(gambler.betElement.value);
+  var i, choice;
+  for (i = 0; i < gambler.choiceElements.length; i++) {
+    if (gambler.choiceElements[i].checked) {
+      choice = gambler.choiceElements[i].value;
+      break;
+    }
+  }
+
+  gambler.walletElement.textContent =
+    Number(gambler.walletElement.textContent) - bet;
 
   var animal1 = initializeAnimal(animal1type, 1);
   var animal2 = initializeAnimal(animal2type, 2);
 
-  var bigRace = new Race(animal1, animal2);
+  var bigRace = new Race(animal1, animal2, bet, choice);
 
   runRaceInner(bigRace);
 }
