@@ -35,16 +35,16 @@ function Race(animal1, animal2, bet, choice) {
     var winner = "";
     if ((this.animal1.position >= this.totalDistance) &&//Animal1 wins if they cross
         (this.animal2.position < this.totalDistance)) {  //and animal2 doesn't
-      winner = this.animal1.name;
+      winner = "top";
     } else if ((this.animal2.position >= this.totalDistance) &&  //and vice versa
           (this.animal1.position < this.totalDistance)) {
-      winner = this.animal2.name;
+      winner = "bottom";
     } else if ((this.animal2.position >= this.totalDistance) &&  //if it looks like a tie
           (this.animal1.position >= this.totalDistance)) {
       if (this.animal2.position > this.animal1.position) { //figure out who went farther
-        winner = this.animal2.name;
+        winner = "bottom";
       } else if (this.animal1.position > this.animal2.position) {
-        winner = this.animal1.name;
+        winner = "top";
       } else {             //They both went the same distance if we get here
         winner = "TIE"; //This is a flag; we'll use it differently from a name
       }
@@ -106,14 +106,16 @@ function runRaceInner(race) {
       gambler.walletElement.textContent =   //you get your bet back
         Number(gambler.walletElement.textContent) + race.bet;
     } else {
-      invTextElement.textContent = winner + " Wins!!!";
-      if ((race.choice === "top") && (winner === race.animal1.name)) {
-        gambler.walletElement.textContent = //collect your winnings
-          Number(gambler.walletElement.textContent) + 2 * race.bet;
-      } else if ((race.choice === "bottom") && (winner === race.animal2.name)) {
+      if (race.choice === winner) { //collect winnings; otherwise wallet is same
         gambler.walletElement.textContent =
           Number(gambler.walletElement.textContent) + 2 * race.bet;
-      } //Otherwise you lose and your wallet stays the same.
+      }
+      if (winner === "top") {
+        winner = race.animal1.name;
+      } else {
+        winner = race.animal2.name;
+      }
+      invTextElement.textContent = winner + " Wins!!!";
     }
     invElement.style.display = "block";
   }
