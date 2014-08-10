@@ -2,33 +2,56 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>html &amp;  Js</title>
-<link href="main.css" rel="stylesheet" type="text/css">
+<title>HTML &amp; JS RACE</title>
+<script type = "text/javascript" src = "jquery.js"></script>
+<link href = "main.css" rel = "stylesheet" type = "text/css">
 <style type="text/css">
-#cont2 {
-	height: 150px;
-	width: 50%;
-	background-color: #9ADBE8;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 2px;
-}
 </style>
 </head>
-
 <body>
-	<header id="logo">
-    	<h1 style="text-align: center; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif; font-size: 50px; color: #FFFFFF;">Welcome to the race!!!</h1>
-</header>
-<div id="content">
-  <div id="pic1"></div>
-  <div id="pic2"></div>
-  <div id="cont2">
-  <button id="bt1">Start</button>
-  <button id="bt2">Reset</button>
-  
+ <div id = "wrapper">
+  <header id = "logo">
+   <h1>Welcome To The Race !!!</h1>
+  </header>
+  <div id = "content">
+<!-- Set to Block JS-->
+  <div id = "invDiv">
+   <h2 align = "center" id="win">Turtle Wins!!!</h2>
   </div>
+<!-- Set to block JS-->
+<div id = "pic1"></div>
+<div id = "pic2"></div>
+<div id="cont3">
+ <p id="P1">Pick your <u>Top</u> Racer&rarr;</p>
+ <p id = "P2">&larr;Pick your <u>Bottom</u> Racer</p>
 </div>
+<div id = "cont2">
+<select id="sel1" style="float:left">
+  <option value="Rabbit">Hare</option>
+  <option value="Turtle" SELECTED>Tortoise</option>
+  <option value="Mouse">Mouse</option>
+</select>
 
+<select id="sel2" style="float:right">
+  <option value="Rabbit" SELECTED>Hare</option>
+  <option value="Turtle">Tortoise</option>
+  <option value="Mouse">Mouse</option>
+</select>
+  <button id = "bt1" onclick = "runRace();"
+   onMouseOver = "this.innerHTML='RACING'" onMouseOut="this.innerHTML='Start'">Start
+  </button>
+<!--Reset button-->
+  <button id = "bt2" onclick = "reset();">Reset</button>
+</div>
+</div><br />
+<footer>&copy;2014 HTML and JS GAME.
+ <a href="https://github.com/DonQuality"
+  title="Github" target="_blank" class="links">DonQuality</a> /
+ <a href="https://github.com/jbbrokaw"
+  title="Github" target="_blank" class="links">Jbbrokaw</a></span>
+</footer>
+<script src = "code.js"></script>
+</div>
 </body>
 </html>
+<!-- HTML & JS GAME -->
