@@ -134,5 +134,8 @@ color: #036;
 }
 #gambler{
 	font-size: 24px;
+	color: #036;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
 	text-align: center;
+	border-radius:8px;
 }
