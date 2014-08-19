@@ -5,6 +5,7 @@
     <title>HTML &amp; JS RACE</title>
     <link href = "main.css" rel = "stylesheet" type = "text/css">
     <link href = "layout.css" rel = "stylesheet" type = "text/css">
+    <link href = "menu.css" rel = "stylesheet" type = "text/css">
   </head>
   <body>
     <header id="logo">
@@ -30,19 +31,19 @@
       <div class="row">
         <div class="racer-menu offset-by-one five columns">
           <p id="P1" class="racer-menu__top-element">Pick your <u>Top</u> Racer</p>
-          <select id="sel1" class="racer-menu__list">
-            <option value="Rabbit">Hare</option>
-            <option value="Turtle" SELECTED>Tortoise</option>
-            <option value="Mouse">Mouse</option>
-          </select>
+          <ul id="sel1" class="racer-menu__list">
+            <li value="Rabbit">Hare</option>
+            <li value="Turtle" SELECTED>Tortoise</option>
+            <li value="Mouse">Mouse</option>
+          </ul>
         </div>
         <div class="racer-menu  offset-by-one five columns">
           <p id="P2" class="racer-menu__top-element">Pick your <u>Bottom</u> Racer</p>
-          <select id="sel2" class="racer-menu__list">
-            <option value="Rabbit" SELECTED>Hare</option>
-            <option value="Turtle">Tortoise</option>
-            <option value="Mouse">Mouse</option>
-          </select>
+          <ul id="sel2" class="racer-menu__list">
+            <li value="Rabbit" SELECTED>Hare</option>
+            <li value="Turtle">Tortoise</option>
+            <li value="Mouse">Mouse</option>
+          </ul>
         </div>
       </div>
       <div class="button-box row">
@@ -62,6 +63,7 @@
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="code.js"></script>
+    <script src="menu.js"></script>
     </div>
   </body>
 </html>

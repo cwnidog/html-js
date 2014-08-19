@@ -1,1 +1,12 @@
-.
+li:hover {
+  background-color: #CCCC52;
+}
+
+li {
+  list-style-type: none;
+  font-size: 16pt;
+}
+
+.selected {
+  background-color: red;
+}

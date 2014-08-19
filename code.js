@@ -1,6 +1,8 @@
 //Moves the tortoise and the hare on the page, based on previous assignment
 
 var raceRunning = false;
+var animal1type = "Turtle";
+var animal2type = "Rabbit";
 
 function Animal(name, speed, focus, imageID) {
   this.name = name;
@@ -58,19 +60,19 @@ function initializeAnimal(animalValue, divNum) {
   var imageElement = document.getElementById(picID);
   if (animalValue === "Turtle") {
     $(function(){
-      $(picID).css({'background-image' : 'url(images/100px-Found_Turtle.png)'})
+      $('#' + picID).css({'background-image' : 'url(images/100px-Found_Turtle.png)'});
     });
     return new Animal("Tortoise", 1, 9, picID);
   }
   if (animalValue === "Rabbit") {
     $(function(){
-      $(picID).css({'background-image' : 'url(url(images/Rabbit-icon.png)'})
+      $('#' + picID).css({'background-image' : 'url(images/Rabbit-icon.png)'});
     });
     return new Animal("Hare", 3, 3, picID);
   }
   if (animalValue === "Mouse") {
     $(function(){
-      $(picID).css({'background-image' : 'url(url(images/Rabbit-icon.png)'})
+      $('#' + picID).css({'background-image' : 'url(images/mouse-icon.png)'});
     });
     return new Animal("Mouse", 8, 1, picID);
   }
@@ -142,8 +144,6 @@ function runRace() {
   raceRunning = true;
 
   //get input here
-  var animal1type = document.getElementById("sel1").value;
-  var animal2type = document.getElementById("sel2").value;
   var bet = Number(gambler.betElement.value);
   var i, choice;
   for (i = 0; i < gambler.choiceElements.length; i++) {
