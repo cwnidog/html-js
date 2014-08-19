@@ -55,24 +55,18 @@ function Race(animal1, animal2, bet, choice) {
 
 function initializeAnimal(animalValue, divNum) {
   var picID = "pic" + divNum;
-  var imageElement = document.getElementById(picID);
+  //var imageElement = document.getElementById(picID);
   if (animalValue === "Turtle") {
-    $(function(){
-      $(picID).css({'background-image' : 'url(images/100px-Found_Turtle.png)'})
-    });
-    return new Animal("Tortoise", 1, 9, picID);
+      $('#' + picID).css({'background-image' : 'url(images/100px-Found_Turtle.png)'});
+        return new Animal("Tortoise", 1, 9, picID);
   }
   if (animalValue === "Rabbit") {
-    $(function(){
-      $(picID).css({'background-image' : 'url(url(images/Rabbit-icon.png)'})
-    });
+      $("#" + picID).css({'background-image' : 'url(images/Rabbit-icon.png)'});
     return new Animal("Hare", 3, 3, picID);
   }
   if (animalValue === "Mouse") {
-    $(function(){
-      $(picID).css({'background-image' : 'url(url(images/Rabbit-icon.png)'})
-    });
-    return new Animal("Mouse", 8, 1, picID);
+      $('#' + picID).css({'background-image' : 'url(images/mouse-icon.png)'});
+        return new Animal("Mouse", 8, 1, picID);
   }
 }
 
