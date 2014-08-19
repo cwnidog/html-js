@@ -115,8 +115,14 @@ function runRaceInner(race) {
       } else {
         winner = race.animal2.name;
       }
-      invTextElement.textContent = winner + " Wins!!!";
+      $(function(){
+          $('#invDiv').css({'display': 'block'});
+      });
+      //invTextElement.textContent = winner + " Wins!!!";
     }
+    $(function(){
+      $('#invDiv').css({"display" : "block"});
+    });
     invElement.style.display = "block";
   }
 }
