@@ -5,6 +5,7 @@ li:hover {
 li {
   list-style-type: none;
   font-size: 16pt;
+  padding: 5px;
 }
 
 .selected {
