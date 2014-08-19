@@ -1,6 +1,8 @@
 //Moves the tortoise and the hare on the page, based on previous assignment
 
 var raceRunning = false;
+var animal1type = "Turtle";
+var animal2type = "Rabbit";
 
 function Animal(name, speed, focus, imageID) {
   this.name = name;
@@ -137,8 +139,6 @@ function runRace() {
   raceRunning = true;
 
   //get input here
-  var animal1type = document.getElementById("sel1").value;
-  var animal2type = document.getElementById("sel2").value;
   var bet = Number(gambler.betElement.value);
   var i, choice;
   for (i = 0; i < gambler.choiceElements.length; i++) {
