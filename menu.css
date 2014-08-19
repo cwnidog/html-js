@@ -10,3 +10,12 @@ li {
 .selected {
   background-color: red;
 }
+
+.racer-menu {
+  position: relative;
+}
+
+ul {
+  position: absolute;
+  top: 3em;
+}
