@@ -57,15 +57,21 @@ function initializeAnimal(animalValue, divNum) {
   var picID = "pic" + divNum;
   var imageElement = document.getElementById(picID);
   if (animalValue === "Turtle") {
-    imageElement.style.backgroundImage = "url(images/100px-Found_Turtle.png)";
+    $(function(){
+      $(picID).css({'background-image' : 'url(images/100px-Found_Turtle.png)'})
+    });
     return new Animal("Tortoise", 1, 9, picID);
   }
   if (animalValue === "Rabbit") {
-    imageElement.style.backgroundImage = "url(images/Rabbit-icon.png)";
+    $(function(){
+      $(picID).css({'background-image' : 'url(url(images/Rabbit-icon.png)'})
+    });
     return new Animal("Hare", 3, 3, picID);
   }
   if (animalValue === "Mouse") {
-    imageElement.style.backgroundImage = "url(images/mouse-icon.png)";
+    $(function(){
+      $(picID).css({'background-image' : 'url(url(images/Rabbit-icon.png)'})
+    });
     return new Animal("Mouse", 8, 1, picID);
   }
 }
@@ -115,8 +121,14 @@ function runRaceInner(race) {
       } else {
         winner = race.animal2.name;
       }
-      invTextElement.textContent = winner + " Wins!!!";
+      $(function(){
+          $('#invDiv').css({'display': 'block'});
+      });
+      //invTextElement.textContent = winner + " Wins!!!";
     }
+    $(function(){
+      $('#invDiv').css({"display" : "block"});
+    });
     invElement.style.display = "block";
   }
 }
