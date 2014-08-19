@@ -1,140 +1,140 @@
 body {
-	background-repeat: no-repeat;
-	background-position: center center fixed;
-	background-image: url(images/bg.jpg);
-	background-attachment: fixed;
-	margin-left: 0px;
-	margin-top: -5px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	background-color: #A2F371;
+  background-repeat: no-repeat;
+  background-position: center center fixed;
+  background-image: url(images/bg.jpg);
+  background-attachment: fixed;
+  margin-left: 0px;
+  margin-top: -5px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  background-color: #A2F371;
 }
 a:link {
-	text-decoration: none;
+  text-decoration: none;
 }
 a:visited {
-	text-decoration: none;
+  text-decoration: none;
 }
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 a:active {
-	text-decoration: none;
+  text-decoration: none;
 }
 #logo {
-	width: 100%;
-	height: 60px;
-	margin-top: -40px;
-	background-color: #599DD1;
+  width: 100%;
+  height: 60px;
+  margin-top: -40px;
+  background-color: #599DD1;
 }
 
 .pic {
-	margin-top: 30px;
-	margin-left: 1%;
-	width: 100px;
-	height: 100px;
+  margin-top: 30px;
+  margin-left: 1%;
+  width: 100px;
+  height: 100px;
 }
 
 #pic1 {
-	background-image: url(images/100px-Found_Turtle.png);
+  background-image: url(images/100px-Found_Turtle.png);
 }
 
 #pic2 {
 
-	background-image: url(images/Rabbit-icon.png);
-	margin-top: 100px;
+  background-image: url(images/Rabbit-icon.png);
+  margin-top: 100px;
 }
 
 button {
-	width: 100px;
-	height: 50px;
-	margin-top: 50px;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Verdana", "sans-serif";
+  width: 100px;
+  height: 50px;
+  margin-top: 50px;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Verdana", "sans-serif";
 }
 
 .button {
-	width: 100px;
-	height: 50px;
-	margin-left: 20em;
+  width: 100px;
+  height: 50px;
+  margin-left: 20em;
 }
 
 .button-box {
-	margin-left: auto;
+  margin-left: auto;
 }
 
 #cont2 {
-	height: 120px;
-	width: 90%;
-	/* [disabled]background-color: #599DD1; */
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 2px;
-	display:;/* for now */
+  height: 120px;
+  width: 90%;
+  /* [disabled]background-color: #599DD1; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2px;
+  display:;/* for now */
 }
 #invDiv {
-	height: 100px;
-	width: 800px;
-	margin-right: auto;
-	margin-top: 100px;
-	position:fixed;
-	margin-left:190px;
-	display:none;/* This is the one that needs to be set to Display block*/
-	z-index: 99;
+  height: 100px;
+  width: 800px;
+  margin-right: auto;
+  margin-top: 100px;
+  position:fixed;
+  margin-left:190px;
+  display:none;/* This is the one that needs to be set to Display block*/
+  z-index: 99;
 }
 #wrapper {
-	height: auto;
+  height: auto;
 }
 .links {
-	color: #0054FF;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+  color: #0054FF;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
 }
 h1{
-	text-align: center;
-	font-family:'Lucida Grande','Lucida Sans Unicode', 'Lucida Sans','DejaVu Sans',Verdana, sans-serif; font-size: 50px;
+  text-align: center;
+  font-family:'Lucida Grande','Lucida Sans Unicode', 'Lucida Sans','DejaVu Sans',Verdana, sans-serif; font-size: 50px;
   color: #FFFFFF;
 }
 #win{
-	 font-family: 'Lucida Grande', 'Lucida Sans Unicode','Lucida Sans', 'DejaVu Sans', Verdana, sans-serif;
-	 text-align: center;
-	 font-size:  80px;
-	 color: #FFFFFF;
-	 z-index: 99;
+   font-family: 'Lucida Grande', 'Lucida Sans Unicode','Lucida Sans', 'DejaVu Sans', Verdana, sans-serif;
+   text-align: center;
+   font-size:  80px;
+   color: #FFFFFF;
+   z-index: 99;
 }
 footer{
-	text-align: center;
-	color: #236467;
-	font-family: 'Lucida Grande','Lucida Sans Unicode','Lucida Sans','DejaVu Sans',
+  text-align: center;
+  color: #236467;
+  font-family: 'Lucida Grande','Lucida Sans Unicode','Lucida Sans','DejaVu Sans',
   Verdana,
   sans-serif;
   position: relative;
 }
 #cont3 {
-	height: 50px;
-	width: 90%;
-	margin-right: auto;
-	margin-left: auto;
+  height: 50px;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
 }
 p{
-	font-size: 24px;
+  font-size: 24px;
 }
 #P1{
-	font-size: 24px;
-	color: #036;
+  font-size: 24px;
+  color: #036;
 }
 #P2{
-	color: #036;
+  color: #036;
 }
 .links {
-	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	font-size: 18px;
-	color: #FF5F00;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 18px;
+  color: #FF5F00;
 }
 #gambler{
-	font-size: 24px;
-	color: #036;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
-	text-align: center;
-	border-radius:8px;
+  font-size: 24px;
+  color: #036;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+  text-align: center;
+  border-radius:8px;
 }
 
 
