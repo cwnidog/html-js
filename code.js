@@ -13,7 +13,7 @@ function Animal(name, speed, focus, imageID) {
     if (Math.random() * 10 < this.focus) {//for focus = 8, moves 80% of the time
       this.position += speed;
     }
-  };
+  }
 }
 
 function Race(animal1, animal2, bet, choice) {
@@ -110,6 +110,7 @@ function runRaceInner(race) {
         gambler.walletElement.textContent =
           Number(gambler.walletElement.textContent) + 2 * race.bet;
       }
+      $('#win').css({"color" : "#F00"})
       if (winner === "top") {
         winner = race.animal1.name;
       } else {
@@ -118,7 +119,7 @@ function runRaceInner(race) {
       $(function(){
           $('#invDiv').css({'display': 'block'});
       });
-      //invTextElement.textContent = winner + " Wins!!!";
+      invTextElement.textContent = winner + " Wins!!!";
     }
     $(function(){
       $('#invDiv').css({"display" : "block"});
@@ -146,6 +147,9 @@ function runRace() {
       break;
     }
   }
+
+  $('#bet').attr('min', '0');
+  $('#bet').attr('max', gambler.walletElement.textContent);
 
   gambler.walletElement.textContent =
     Number(gambler.walletElement.textContent) - bet;
