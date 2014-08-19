@@ -1,70 +1,68 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>HTML &amp; JS RACE</title>
-<link href = "main.css" rel = "stylesheet" type = "text/css">
-<style type="text/css">
-</style>
-</head>
-<body>
- <div id = "wrapper">
-  <header id = "logo">
-   <h1>Welcome To The Race !!!</h1>
-  </header>
-  <div id = "content">
-<!-- Set to Block JS-->
-  <div id = "invDiv">
-   <h2 align = "center" id="win">Turtle Wins!!!</h2>
-  </div>
-<!-- Set to block JS-->
-<div id = "pic1"></div>
-<div id = "pic2"></div>
-<div id="gambler">Make a bet: <input type="text" id="bet"  placeholder="Place your bet here..." style="border-radius:8px;" />
-  <form>
-    <input type="radio" name="choice" value="top" checked>Top Racer<br>
-    <input type="radio" name="choice" value="bottom">
-    <span style="color: #036; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif;">Bottom Racer
-    </span>
-  </form>
-  <span style="color: #036"></br>
-  Wallet: </span><span style="color: #FFFFFF; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif;"><span style="color: #036">$<span id="funds">100</span></span></span>
-</div>
-<div id="cont3">
- <p id="P1">Pick your <u>Top</u> Racer&rarr;</p>
- <p id = "P2">&larr;Pick your <u>Bottom</u> Racer</p>
-</div>
-  <div id = "cont2">
-  <select id="sel1" style="float:left">
-    <option value="Rabbit">Hare</option>
-    <option value="Turtle" SELECTED>Tortoise</option>
-    <option value="Mouse">Mouse</option>
-  </select>
-
-
-  <select id="sel2" style="float:right">
-    <option value="Rabbit" SELECTED>Hare</option>
-    <option value="Turtle">Tortoise</option>
-    <option value="Mouse">Mouse</option>
-  </select>
-
-  <button id = "bt1" onclick = "runRace();"
-   onMouseOver = "this.innerHTML='RACING'" onMouseOut="this.innerHTML='Start'">Start
-  </button>
-  <!--Reset button-->
-  <button id = "bt2" onclick = "reset();">Reset</button>
-  </div>
-<br />
-<footer>&copy;2014 HTML and JS GAME.
- <a href="https://github.com/DonQuality"
-  title="Github" target="_blank" class="links">DonQuality</a> /
- <a href="https://github.com/jbbrokaw"
-  title="Github" target="_blank" class="links">Jbbrokaw</a></span>
-</footer>
-<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script src = "code.js"></script>
-</div>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML &amp; JS RACE</title>
+    <link href = "main.css" rel = "stylesheet" type = "text/css">
+    <link href = "layout.css" rel = "stylesheet" type = "text/css">
+  </head>
+  <body>
+    <header id="logo">
+      <h1>Welcome To The Race !!!</h1>
+    </header>
+  <!-- Set to Block JS-->
+    <div id="invDiv">
+      <h2 align="center" id="win">Turtle Wins!!!</h2>
+    </div>
+  <!-- Set to block JS-->
+    <div id="pic1" class="pic"></div>
+    <div id="pic2" class="pic"></div>
+    <div class="container">
+      <div id="gambler">Make a bet: <input type="text" id="bet" placeholder="Place your bet here..." style="border-radius:8px;" />
+        <form>
+          <input type="radio" name="choice" value="top" checked>Top Racer<br>
+          <input type="radio" name="choice" value="bottom">
+          <span style="color: #036; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif;">Bottom Racer</span>
+        </form>
+        <span style="color: #036"></br>Wallet: </span>
+        <span style="color: #FFFFFF; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif;"><span style="color: #036">$<span id="funds">100</span></span></span>
+      </div>
+      <div class="row">
+        <div class="racer-menu offset-by-one five columns">
+          <p id="P1" class="racer-menu__top-element">Pick your <u>Top</u> Racer</p>
+          <select id="sel1" class="racer-menu__list">
+            <option value="Rabbit">Hare</option>
+            <option value="Turtle" SELECTED>Tortoise</option>
+            <option value="Mouse">Mouse</option>
+          </select>
+        </div>
+        <div class="racer-menu  offset-by-one five columns">
+          <p id="P2" class="racer-menu__top-element">Pick your <u>Bottom</u> Racer</p>
+          <select id="sel2" class="racer-menu__list">
+            <option value="Rabbit" SELECTED>Hare</option>
+            <option value="Turtle">Tortoise</option>
+            <option value="Mouse">Mouse</option>
+          </select>
+        </div>
+      </div>
+      <div class="button-box row">
+        <button id="bt1" class="button" onclick = "runRace();"
+         onMouseOver = "this.innerHTML='RACING'" onMouseOut="this.innerHTML='Start'">Start
+        </button>
+        <!--Reset button-->
+        <button id="bt2" class="button" onclick = "reset();">Reset</button>
+      </div>
+    </div>
+    <footer>&copy;2014 HTML and JS GAME.
+       <a href="https://github.com/DonQuality"
+          title="Github" target="_blank" class="links">DonQuality</a> /
+       <a href="https://github.com/jbbrokaw"
+          title="Github" target="_blank" class="links">Jbbrokaw</a></span>
+    </footer>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="code.js"></script>
+    </div>
+  </body>
 </html>
 <!-- HTML & JS GAME -->
